@@ -6,3 +6,5 @@
 4. файлы с расширением .tfvars и .tfvars.json
 5. файлы override.tf и override.tf.json, а также оканчивающиеся на _override.tf и _override.tf.json
 5. файлы .terraformrc и terraform.rc
+
+Строка добавлена с помощью IDE
