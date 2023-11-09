@@ -1,10 +1,25 @@
-1. aefead2207ef7e2aa5dc81a34aedf0cad4c32545
+1. команда: 
+git log aefea 
+ответ:
+aefead2207ef7e2aa5dc81a34aedf0cad4c32545
 Update CHANGELOG.md
 
 2.
-+ v0.12.23
-+ 2 commits 56cd7859e0 9ea88f22fc
-+ commit 33ff1c03bb960b332be3af2e333462dde88b279e (tag: v0.12.24)
++ команда:
+git log 85024d3
+ответ:
+тэг указан в скобках коммита 
+v0.12.23
++ команда:
+git log b8d720
+ответ:
+в коммите есть строка merge где указаны родители
+2 commits 56cd7859e0 9ea88f22fc
++ команда:
+git log v0.12.23..v0.12.24
+ответ:
+после выполнения команды получаем список коммитов: 
+commit 33ff1c03bb960b332be3af2e333462dde88b279e (tag: v0.12.24)
     v0.12.24
 
   commit b14b74c4939dcab573326f4e3ee2a62e23e12f89
@@ -43,9 +58,25 @@ Update CHANGELOG.md
 
   commit 225466bc3e5f35baa5d07197bbc079345b77525e
     Cleanup after v0.12.23 release
-+ commit 8c928e83589d90a031f811fae52a81be7153e82f
-+ commit 78b12205587fe839f10d946ea3fdc06719decb05
++ команда:
+git log -S 'func providerSource'
+ответ:
+первый коммит указывает когда была создана функция, второй - когда изменена 
+commit 8c928e83589d90a031f811fae52a81be7153e82f
++ команда:
+git grep "globalPluginDirs"
+git log -L :globalPluginDirs:plugins.go
+ответ:
+первой командой получаем имя файла в котором находится функция, второй ищем изменения
+ commit 78b12205587fe839f10d946ea3fdc06719decb05
   commit 52dbf94834cb970b510f2fba853a5b49ad9b1a46  
   commit 41ab0aef7a0fe030e84018973a64135b11abcd70
   commit 66ebff90cdfaa6938f26f908c7ebad8d547fea17
-+ 5ac311e2a91 (Martin Atkins 2017-05-03 16:25:41 -0700 15)
++ команда:
+git log -S "synchronizedWriters"
+git checkout 5ac311e2a91e381e2f52234668b49ba670aa0fe5 
+git grep "synchronizedWriters"
+git blame -C -L 15,30 synchronized_writers.go
+ответ:
+Первой командой ищем перый коммит, где упоминается эта функция, второй переключаемся на этот коммит, третьей - ищем имя файла в которой находится эта функция, затем находим строки функции. Последней командой смотрим аннотацию кто написал эту функцию. 
+5ac311e2a91 (Martin Atkins 2017-05-03 16:25:41 -0700 15)
