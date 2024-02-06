@@ -16,4 +16,15 @@
         - Работа с целями по протоколу ssh, нет необходимости устанавливать агенты.
         - Написан на Python ниже порог входа для написания своих модулей.
 3. # Задача 3
-    
+    + vboxmanage -v
+6.1.48_Ubuntur159471
+    + vagrant -v
+Vagrant 2.3.4
+    + terraform -v
+Terraform v1.5.7
+on linux_amd64
+
+Your version of Terraform is out of date! The latest version
+is 1.7.2. You can update by downloading from https://www.terraform.io/downloads.html
+4. # Задача 4
+    + См. скриншот result.png в директории screens.
